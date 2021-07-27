@@ -1,0 +1,10 @@
+	delim [  \t\n]
+                w13     123 5
+                %{
+                >=
+	{yylval=(int) installID();return(ID);}
+	int installID()  {
+		int a=0;
+		a++;
+		return a;
+	}

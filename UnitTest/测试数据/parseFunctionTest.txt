@@ -1,0 +1,21 @@
+%{
+%}
+
+
+%%
+
+%%
+int installID()	{
+			int a=10;
+			a++;
+			int b=5;
+			int c=a+b;
+			return c;
+		}
+
+int installNum()	{
+			std::vector<int> list;
+			list.push(1);
+			list.push(2);
+			return list;
+		}

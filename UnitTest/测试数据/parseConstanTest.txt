@@ -1,0 +1,6 @@
+%{
+	LT=1,LE=2,EQ=3,NE=4,GT=5,GE=6,
+	LF=7,THEN=8,ELSE=9,ID=10,NUMBER=11,RELOP=12
+%}
+%%
+%%

@@ -1,0 +1,24 @@
+%{
+	LT=1,LE=2,EQ=3,NE=4,GT=5,GE=6,
+	LF=7,THEN=8,ELSE=9,ID=10,NUMBER=11,RELOP=12
+%}
+
+delim	[ \t\n]
+ws	{delim}+
+letter	[A-Za-z]	
+digit	[0-9]
+id	{letter}({letter}|{digit})*
+number	{digit}+(\.{digit}+)?(E[+-]?{digit}+)?
+
+%%
+{number}	{yylval= (int) installNum(); return(NUMBER);}
+{id}	{yylval= (int) installID(); return(ID);}
+"<"	{yylval= (int) LT;  return(RELOP); }
+%%
+int installID()	{
+			return 10;
+		}
+
+int installNum()	{
+			return 5;
+		}

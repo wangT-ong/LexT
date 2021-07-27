@@ -1,0 +1,29 @@
+%{
+	LT=1,LE=2,EQ=3,NE=4,GT=5,GE=6,
+	LF=7,THEN=8,ELSE=9,ID=10,NUMBER=11,RELOP=12
+%}
+
+delim	[ \t\n]
+ws	{delim}+
+letter	[A-Za-z]	
+digit	[0-9]
+id	{letter}({letter}|{digit})*
+number	{digit}+(\.{digit}+)?(E[+-]?{digit}+)?
+
+%%
+{number}	{yylval= (int) installNum(); return(NUMBER);}
+%%
+int installID()	{
+			int a=10;
+			a++;
+			int b=5;
+			int c=a+b;
+			return c;
+		}
+
+int installNum()	{
+			std::vector<int> list;
+			list.push_back(1);
+			list.push_back(2);
+			return list[0];
+		}
