@@ -28,6 +28,8 @@ class TransitionDataDummy
 {
 public:
 	using Transitions = std::map<int, std::set<int>>;
+	std::map<std::string, int>m_constTable;
+	std::vector<FunctionPtr> m_functionList;
 	std::vector<Transitions> m_transitionTable;
 	std::vector<int>m_finalStats;
 	std::map<int, std::string>m_actions;

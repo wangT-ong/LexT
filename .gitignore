@@ -4,3 +4,8 @@
 
 /.vs/LexT/v16
 /.vs
+/Source/.vs/LexT/v16
+/Source/x64/Debug/LexT.tlog
+/Source/x64/Debug
+/UnitTest/x64/Debug/UnitTest.tlog
+/UnitTest/x64/Debug
